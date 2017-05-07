@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         String url = "https://cnn.com/story/98432/photography";
-        String pattern = "[cnn]+";
+        String pattern = "[https]{5,}+";
 
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(url);
