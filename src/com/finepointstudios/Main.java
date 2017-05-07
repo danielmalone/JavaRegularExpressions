@@ -8,13 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
         String url = "https://cnn.com/story/98432/photography";
-        String pattern = "\\d+";
+        String pattern = "[cnn]+";
 
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(url);
-        if (m.find()) {
+        while (m.find()) {
             System.out.println("Found: " + m.group(0));
         }
-
     }
 }
